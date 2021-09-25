@@ -1,0 +1,13 @@
+{
+    "articles": [
+      { "id": 1, "libelle": "HP", "serie": "HP123", "prix":650.00,"categoriesId":1 }
+,   { "id": 2, "libelle": "DELL", "serie": "D1234", "prix":460.00,"categoriesId":1 }
+,   { "id": 3, "libelle": "ASUS", "serie": "AS445", "prix":850.50,"categoriesId":1 }
+,   { "id": 4, "libelle": "ASUS", "serie": "AS445", "prix":256.00,"categoriesId":2 }
+    ],
+    "categories": [
+      { "id": 1, "designation": "Ordinateur"}
+    , { "id": 2, "designation": "Imprimante"}
+    ],
+    "profile": { "name": "typicode" }
+  }

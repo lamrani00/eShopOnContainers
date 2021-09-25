@@ -1,0 +1,31 @@
+1- instalation de jason-server
+npm install --save json-server
+2- creation le fichier db.json
+ajouter un nouveau fichier db.json
+creation les donnée de la base de donnée en format json dans le fichier créé
+3- instalation une dépendence pour démarrer plusieur commande en parallel ! 
+npm install --save concurrently
+5- configuration le ficher packahe.json 
+cette me permet de lancer plusieur cmd grace à concurrently commnce par démmarage de l'appliaction
+ensuite le petit serveur (json-server) qui joue le role de backend et enfin (watch ) qui aide à 
+voir les modifications faites sur la base de donnée db.json
+    "start": "concurrently \"ng serve\" \"json-server --watch db.json\" ",
+6- instalation des features de front jquery bootstrap....
+npm install --save bootstrap 
+npm install --save jquerycld
+npm install --save font-awesome
+7- creation le premier component
+*ng g  c components/nav-bar
+*j'ai copier le code html de site bootstrap https://www.w3schools.com/bootstrap/bootstrap_navbar.asp
+8- ajout les fichiers bootstrap et autres dans le ficher angular.json
+* dans styles =>   "node_modules/bootstrap/dist/css/bootstrap.min.css"
+* dans scripts =>      "node_modules/jquery/dist/jquery.min.js" et "node_modules/bootstrap/dist/js/bootstrap.min.js"
+9 - ajouter fontaweson dans le ficheir styles.css
+@import "~font-awesome/css/font-awesome.min.js"; 
+il ne faut pas faire le chemin complet parce que angular genere une erreur (node_modules/...)
+10 ajout le component nav-bar créé dans le main 
+11 creation des nouveaux components home et articles
+12 modification le module app-routing.node_modules
+{path:"",component:HomeComponent},{path:"articles",component:ArticlesComponent}
+13 ajouter les link dans le fichier navbar après l'ajout <router-outlet></router-outlet> dans app.component.html
+14 creation des services 
