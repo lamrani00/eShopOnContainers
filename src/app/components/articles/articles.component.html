@@ -1,1 +1,33 @@
-<p>articles works!</p>
+<div class="container">
+    <ul class="navbar navbar-expand-sm bg-light navbar-light">
+        <li class="navbar navbar-nav">
+            <button (click)="OngetAllArticles()" class="btn btn-outline-info m-lg-2">
+                All articles</button>
+        </li>
+
+        <li class="navbar navbar-nav">
+            <button (click)="OngetArticlesDispo()" class="btn btn-outline-info m-lg-2">
+                Disponible</button>
+        </li>
+    </ul>
+</div>
+
+<div class="container" *ngIf="articles$">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Libelle</th>
+            <th>Série</th>
+            <th>Prix</th>
+            <th>Disponible</th>
+        </tr>
+        <tr *ngFor="let article of articles">
+
+            <td>{{article.id}}</td>
+            <td>{{article.libelle}}</td>
+            <td>{{article.serie}}</td>
+            <td>{{article.prix}}</td>
+            <td>{{article.available}}</td>
+        </tr>
+    </table>
+</div>
