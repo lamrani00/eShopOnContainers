@@ -6,7 +6,7 @@ creation les donnée de la base de donnée en format json dans le fichier créé
 3- instalation une dépendence pour démarrer plusieur commande en parallel ! 
 npm install --save concurrently
 5- configuration le ficher packahe.json 
-cette me permet de lancer plusieur cmd grace à concurrently commnce par démmarage de l'appliaction
+cette me permet de lancer plusieur cmd grace à concurrently commnce par démmarage de l'application
 ensuite le petit serveur (json-server) qui joue le role de backend et enfin (watch ) qui aide à 
 voir les modifications faites sur la base de donnée db.json
     "start": "concurrently \"ng serve\" \"json-server --watch db.json\" ",
@@ -31,3 +31,11 @@ il ne faut pas faire le chemin complet parce que angular genere une erreur (node
 14 creation des services 
 Créaion articles.service ce fichier esponsable sur les requettes http 
 il ne faut oublier l'ajout le type de retour :Observable<Article[]>
+a. dans le .html si on utilise Observable il faut utiliser le pipe async
+b. le symbole $  il faut le mettre après la variable
+        <tr *ngFor="let article of articles$ | async">
+
+c. en conservant l'organisation de l'application:
+c.1 je vais créer un fichier state dans le dossier helpers 
+le fichier me permet de déclérer les status ensuite me facilite le retour d'observ 
+
